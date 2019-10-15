@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Estimates</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles/EstimateNewUser.css">
+</head>
+
+<body>
+  <div class="main-body">
+    <header class="header">
+      <!-- Header -->
+      <div>
+        <h1 class="main-heading">Estimates</h1>
+        
+
+      </div>
+      <div>
+        <ul class="header-lists">
+          <li>
+             <a href="signin.html"> <span>Login</span></a>
+          </li>
+          <li class="profile-list">
+              <a href="signup.html" class="info"> <span> Sign Up</span> </a>
+          </li>
+          <li class="hamburger" id="menuBtn">
+            <span class="hamburger-btn"></span>
+          </li>
+        </ul>
+      </div>
+
+    </header>
+    <aside id="aside">
+      <!-- aside -->
+      <img class="aside-logo" src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1570734048/utlb5whjjogrhiyyjcsh.svg" alt="Logo">
+      <ul>
+        <li>
+          <a href="#"><img src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1570734114/y2rqxdd9uwme45xmmhrn.svg" alt="" /> Dashboard</a>
+        </li>
+        <li>
+          <a href="#"><img src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1570734177/Lancer/vmquuotbhkuc9ftu5d4u.svg" alt="" /> Clients</a>
+        </li>
+        <li>
+          <a href="#"><img src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1570734281/Lancer/jdqdtejpdzwvjtupwu6c.svg" alt="" /> Estimates</a>
+        </li>
+        <li>
+          <a href="#"><img src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1570734330/Lancer/cvfxr80lzreybtlzrysh.svg" alt="" />
+            Projects</a>
+        </li>
+        <li>
+          <a href="#"><img src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1570734377/Lancer/ufecxk594hirdlfimrkj.svg" alt="" /> Invoices</a>
+        </li>
+        <li>
+          <a href="#"><img src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1570734426/Lancer/nbtnzwwasxyxjvnqqvog.svg" alt="" /> Contract</a>
+        </li>
+        <li>
+          <a href="#"><img src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1570734470/Lancer/jomwf9zsf6gp3d3ygaom.svg" alt="" /> Proposals</a>
+        </li>
+      </ul>
+    </aside>
+    <main>
+      <!-- Main body -->
+      <div class="container main-container">
+        <div class="estimates">
+          <a href="#"><p class="est">Create Estimate</p></a>
+        </div>
+        <div class="est-details">
+          <h5>Estimates helps you place value to your work and time!</h5>
+        </div>
+        <div class="convert-estimate">
+          <p>Create an estimate and easily convert it to an invoice and send to your client.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  const menuBtn = document.getElementById( "menuBtn" )
+  const aside = document.getElementById( "aside" )
+  let showMenu = false
+  menuBtn.addEventListener( "click", () => {
+    if ( !showMenu ) {
+      aside.classList.add( "open-menu" )
+      document.querySelector( ".hamburger-btn" ).classList.add( "cross-hamburger" )
+
+      showMenu = true;
+    } else {
+      aside.classList.remove( "open-menu" )
+      document.querySelector( ".hamburger-btn" ).classList.remove( "cross-hamburger" )
+      showMenu = false;
+    }
+  } )
+</script>
+
+</html>
+
+<!-- Blue: #091429 -->
+<!-- Button:  -->
+
+ 
