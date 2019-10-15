@@ -82,12 +82,18 @@ nav img {
 	background-color: #FFFFFF;
 	color: #000000;
 	border: 1px solid;
-	border-radius: 50px;
+	border-radius: 50%;
 	text-align: center;
 	padding: 15px 15px;
 	margin: 7px;
+	margin-right: 15px;
 	text-decoration: none;
 	
+}
+
+#hc-black{
+	color: black;
+
 }
 
 .menu {
@@ -102,7 +108,12 @@ nav img {
 	padding-left: 15px;
 	overflow: hidden;
 
- 
+}
+
+#hc-main{
+	margin-top:2vh;
+	
+	
 }
 
 h1 {
@@ -115,13 +126,22 @@ h1 {
 	
 }
 
+.notification-case{
+	margin: 5vw;
+	margin-top: 4vw;
+}
+
 
 .notification-box img {
 	margin: 10px;
 	margin-left: 20px;
 	margin-right: -10px;
 	padding: 14px;
+	max-width: 10vw;
+	height: 10vh;
 }
+
+
 
 .notification-box {
 	border: 1px solid #C4C4C4;
@@ -199,7 +219,7 @@ letter-spacing: 1px;
 	color: white;
 }
 
-.sidebar img, {
+.sidebar img {
  padding: 5px;
 }
 
@@ -249,6 +269,7 @@ h1, .notification-box, nav {
 	margin-left: 80px;
 }
 }
+	
 
 @media screen and (min-width: 850px) and (max-width: 1090px) {
 
@@ -272,6 +293,12 @@ nav {
 .main {
 	width: 100%;
 }
+
+.hc-size{
+	width: 3rem;
+	height: 3rem;
+}
+
 
 .sidebar ul a {
 margin-top: 20%;
@@ -358,8 +385,8 @@ nav img {
 }
 
 .user {
-	width: 25px;
-	height: 25px;
+	width:35px;
+	height: 35px;
 	background-color: #FFFFFF;
 	color: #000000;
 	border: 1px solid;
@@ -368,6 +395,7 @@ nav img {
 	padding: 10px 10px;
 	margin: 3.5px;
 	text-decoration: none;
+	font-size: 5px;
 	
 }
 
@@ -396,23 +424,23 @@ nav img {
 		<div id="mySidebar" class="sidebar">
 			<a href="javascript:void(0)" class="closebtn" id="closebtn" onclick="closeNav()">×</a>
 			<img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657880/lancers1.png" alt="Lancers-logo" style="text-align: center;
-                        ;
-                        size: 10%;">
-                        <ul>
-                        	
-                          	<p><a href="documents.html"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657805/hicon.png" alt="home-icon"> Dashboard</a></p>
-                          	<p><a href="client-information-active.html"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657765/cicon.hng.png" alt="customer-icon"> Clients</a></p>
-                          	<p><a href="#"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657724/bicon.png" alt="lightbulb-icon"> Project
-                              <i class="fa fa-caret-down"></i></a></p>
-                          	<p><a href="invoice-loggedin_user.html"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657846/iicon.png" alt="invoice-icon"> Invoice</a></p>
-                          	<p><a href="#contract"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657912/picon.png" alt="Project-icon"> Contract</a></p>
-                          	<p><a href="#Proposals"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657682/Aicon.png" alt="approval-icon"> Proposals</a></p>
-                        </ul>
+			;
+			size: 10%;">
+			<ul>
+				
+				<p><a href="documents.html"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657805/hicon.png" alt="home-icon"> Dashboard</a></p>
+				<p><a href="client-information-active.html"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657765/cicon.hng.png" alt="customer-icon"> Clients</a></p>
+				<p><a href="#"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657724/bicon.png" alt="lightbulb-icon"> Project
+					<i class="fa fa-caret-down"></i></a></p>
+				<p><a href="invoice-loggedin_user.html"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657846/iicon.png" alt="invoice-icon"> Invoice</a></p>
+				<p><a href="#contract"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657912/picon.png" alt="Project-icon"> Contract</a></p>
+				<p><a href="#Proposals"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657682/Aicon.png" alt="approval-icon"> Proposals</a></p>
+			</ul>
 		</div>
 		
 	</div>
 
-	<div class="main" id="main">
+	<div class="main" id="hc-main">
 		<nav>
 			<div class="d-flex bd-highlight">
 				<div class="p-2 flex-grow-1 bd-highlight">
@@ -425,104 +453,73 @@ nav img {
 
 				</div>
 				<div class="p-2 bd-highlight navli">
-					<a href="#" ><img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747848/help_bv586q.png"></a>
+					<a href="#" ><img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747848/help_bv586q.png" class="hc-small"></a>
 				</div>
 				<div class="p-2 bd-highlight navli">
-					<a href="#" ><img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747848/alarm_nqoo8i.png"></a>
+					<a href="#" ><img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747848/alarm_nqoo8i.png" class="hc-small"></a>
 				</div>
 				<div class="p-2 bd-highlight navli">
-					<a href="#" ><img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747847/notification_lipoc8.png"></a>
+					<!-- <a href="#" ><img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747847/notification_lipoc8.png"></a> -->
+					<!-- replaced image with font-awesome -->
+					<a class="nav-link" href="#"><i class="fa fa-bell hc-size" aria-hidden="true"></i></a>
 				</div>
-				<div class="p-2 bd-highlight">
-					<a href="#" class="user"><b >PN</b></a>
+				<div class="p-2 bd-highlight user">
+					<a href="#" id="hc-black"><b >AU</b></a>
 				</div>
 			</div>
 		</nav>
-		<h1>NOTIFICATIONS</h1>
-		<div class="notification-box">
-			<div class="d-flex bd-highlight">
-				<div class="p-2 flex-shrink-1 bd-highlight">
-					<img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747847/Vector_c4lyp5.png">
-				</div>
-			  	<div class="p-2 w-100 bd-highlight">
-			  		<b>A new invoice was created</b><br>
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</span>
-					<p>Today 10:21AM</p>
-				</div>
-			</div>
-		</div>
 
-		<div class="notification-box">
-			<div class="d-flex bd-highlight">
-				<div class="p-2 flex-shrink-1 bd-highlight">
-					<img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747847/Vector3_gicch8.png">
-				</div>
-			  	<div class="p-2 w-100 bd-highlight">
-			  		<b>A new invoice was created</b><br>
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</span>
-					<p>Today 10:21AM</p>
-				</div>
-			</div>
-		</div>
+		<!-- grouping notifications -->
+		<div class="notification-case">
+			<h1>NOTIFICATIONS</h1>
 
-		<div class="notification-box">
-			<div class="d-flex bd-highlight">
-				<div class="p-2 flex-shrink-1 bd-highlight">
-					<img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747847/Vector_c4lyp5.png">
-				</div>
-			  	<div class="p-2 w-100 bd-highlight">
-			  		<b>A new invoice was created</b><br>
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</span>
-					<p>Today 10:21AM</p>
+			<div class="notification-box">
+				<div class="d-flex bd-highlight">
+					<div class="p-2 flex-shrink-1 bd-highlight">
+						<img src="https://res.cloudinary.com/helencee/image/upload/v1571155836/notification-icons/green-ribbon_gcyuoh.png">
+						
+					</div>
+						<div class="p-2 w-100 bd-highlight">
+							<b>A new invoice was created</b><br>
+						<span>It is a long established fact that a reader will be distracted by the readable content of a page when at its layout.</span>
+						<p>Today 10:21AM</p>
+					</div>
 				</div>
 			</div>
-		</div>
+		
+			<div class="notification-box">
+				<div class="d-flex bd-highlight">
+					<div class="p-2 flex-shrink-1 bd-highlight">
+						<img src="https://res.cloudinary.com/helencee/image/upload/v1571155836/notification-icons/green-ribbon_gcyuoh.png">
+						
+					</div>
+					<button class="float"><a href="#" class="my-float">+</a></button>
+						<div class="p-2 w-100 bd-highlight">
+							<b>A new invoice was created</b><br>
+						<span>It is a long established fact that a reader will be distracted by the readable content of a page when at its layout.</span>
+						<p>Today 10:21AM</p>
+					</div>
+				</div>
+			</div>
+			<div class="notification-box">
+				<div class="d-flex bd-highlight">
+					<div class="p-2 flex-shrink-1 bd-highlight">
+						<img src="https://res.cloudinary.com/helencee/image/upload/v1571155745/notification-icons/brown-ribbon_yuhmkj.png">
+						
+					</div>
+						<div class="p-2 w-100 bd-highlight">
+							<b>A new invoice was created</b><br>
+						<span>It is a long established fact that a reader will be distracted by the readable content of a page when at its layout.</span>
+						<p>Today 10:21AM</p>
+					</div>
+				</div>
+			</div>
+	
+		
 
-		<div class="notification-box">
-			<div class="d-flex bd-highlight">
-				<div class="p-2 flex-shrink-1 bd-highlight">
-					<img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747847/Vector1_a4qdov.png">
-				</div>
-			  	<div class="p-2 w-100 bd-highlight">
-			  		<b>A new invoice was created</b><br>
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</span>
-					<p>Today 10:21AM</p>
-				</div>
-			</div>
-		</div>
 
-		<div class="notification-box">
-			<div class="d-flex bd-highlight">
-				<div class="p-2 flex-shrink-1 bd-highlight">
-					<img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747847/Vector1_a4qdov.png">
-				</div>
-				<button class="float"><a href="#" class="my-float">+</a></button>
-			  	<div class="p-2 w-100 bd-highlight">
-			  		<b>A new invoice was created</b><br>
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</span>
-					<p>Today 10:21AM</p>
-				</div>
-			</div>
 		</div>
-
-		<div class="notification-box">
-			<div class="d-flex bd-highlight">
-				<div class="p-2 flex-shrink-1 bd-highlight">
-					<img src="https://res.cloudinary.com/ros4eva/image/upload/v1570747847/Vector_c4lyp5.png">
-				</div>
-			  	<div class="p-2 w-100 bd-highlight">
-			  		<b>A new invoice was created</b><br>
-					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</span>
-					<p>Today 10:21AM</p>
-				</div>
-			</div>
-		</div>
+		
 
 	</div>
 
