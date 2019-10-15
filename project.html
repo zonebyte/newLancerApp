@@ -117,6 +117,7 @@
           padding-bottom: 0px;
           background-color: #fff;
           border: none;
+          height: 70px;
           border-radius: 0;
           margin-bottom: 10px;
           box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -150,8 +151,8 @@
           perspective: 1500px;
         }
         #sidebar {
-          min-width: 250px;
-          max-width: 250px;
+          min-width: 220px;
+          max-width: 220px;
           background: var(--primary-color);
           color: #fff;
           transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
@@ -174,7 +175,8 @@
           padding: 10px;
         }
         #sidebar ul li a {
-          padding: 10px;
+          padding: 1.2rem 0rem;
+          padding-left: 40px;
           font-size: 1em;
           font-weight: 600;
           display: block;
@@ -244,6 +246,7 @@
           height: 40px;
           background: #f5f5f5;
           cursor: pointer;
+          display: none;
         }
         #sidebarCollapse span {
           width: 80%;
@@ -282,6 +285,18 @@
             background-color: #76D874;
             border-color:  #76D874;
         }
+
+
+        .container-fluid .input-group{
+            margin-left: 400px;
+            width: 350px;
+        }
+      
+        .container-fluid .mydrop-down {
+            width: 300px;
+        }
+
+
         /* ---------------------------------------------------
             MEDIAQUERIES
         ----------------------------------------------------- */
@@ -290,6 +305,15 @@
             margin-left: -250px;
             transform: rotateY(90deg);
           }
+
+          #sidebarCollapse {
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            cursor: pointer;
+            display:block;
+          }
+
           #sidebar.active {
             margin-left: 0;
             transform: none;
@@ -313,6 +337,23 @@
           #sidebarCollapse.active span:last-of-type {
             transform: rotate(-45deg) translate(1px, -1px);
           }
+
+          /*.content .container-fluid{
+              width: 100% !important;;
+          }*/
+
+          .container-fluid .input-group{
+            margin-left: 0px;
+            width: 290px;
+            }
+
+          .container-fluid .mydrop-down {
+            width: 100%;
+            }
+
+            .container-fluid{
+                margin-left: 40px;
+            }
         }
 
         /* ---------------------------------------------------
@@ -325,6 +366,7 @@
 
         table.project-table tbody tr{
           padding-bottom: 10px !important;
+          width: 100px;
         }
 
         table.project-table tbody tr td span.text-small{
@@ -376,19 +418,19 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://lancer-app.000webhostapp.com/images/svg/lightbulb.svg" height="20" width="auto"> <span> Projects</span></a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Status</a>
+                            <a href="#" class="pl-4">Status</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Overview</a>
+                            <a href="#" class="pl-4">Overview</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4 "><i class="fas fa-dot-circle"></i> Collabrators</a>
+                            <a href="#" class="pl-4 ">Collabrators</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Task</a>
+                            <a href="#" class="pl-4">Task</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Documents</a>
+                            <a href="#" class="pl-4"> Documents</a>
                         </li>
                         
                     </ul>
@@ -457,7 +499,7 @@
                     <div class="">
                         <div class="">
                             <form class="form-inline">
-                                <select class="form-control status">
+                                <select class="form-control status mydrop-down">
                                     <option value="All">All</option>
                                     <option value="Completed">Completed</option>
                                     <option value="Pending">Pending</option>
