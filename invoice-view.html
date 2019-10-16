@@ -257,6 +257,19 @@ svg {
     display: none;
   }
 
+.toggleDesktop {
+  display: inline-block;
+  margin-left: 10px;
+  /*border: 1px solid red;*/
+  padding: .25rem .75rem;
+  line-height: 1;
+  background-color: transparent;
+    border: 1px solid transparent;
+  font-size: 1.25rem;
+  border-color: rgba(0,0,0,.1);
+  color: rgba(0,0,0,.5);
+  border-radius: .25rem;
+}
 
 @media (max-width: 992px) {    
 #sidebar-wrapper {
@@ -330,6 +343,10 @@ tbody, .bold {
     }
     #page-content-wrapper {
   min-width: 100%;
+}
+
+.toggleDesktop {
+  display: block;
 }
 
     @media (max-width: 991px) {
@@ -560,14 +577,16 @@ tbody, .bold {
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
  <a href="#" class="toggleNav navbar-toggler">☰</a>
+ <button type="button" class="toggleDesktop">☰</button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-left mt-2 mt-lg-0">
+            <!-- <button type="button" class="toggleDesktop">☰</button> -->
             <li class="nav-item ml-3 active">
-              <a class="nav-link " href="#">Project Info <span class="sr-only">(current)</span></a>
+              <a class="nav-link " href="#"><!-- <span class="toggleDesktop">☰</span> -->Project Info <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -747,6 +766,12 @@ tbody, .bold {
     
     $(function() {
       $('.toggleNav').on('click',function() {
+        $('#sidebar-wrapper').slideToggle();
+      });
+    });
+
+$(function() {
+      $('.toggleDesktop').on('click',function() {
         $('#sidebar-wrapper').slideToggle();
       });
     });
