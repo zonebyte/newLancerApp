@@ -8,6 +8,98 @@
     <link rel="stylesheet" href="styles/contact-support.css">
   </head>
 
+  <style>
+    
+    body{
+      padding: 0;
+      margin: 0;
+    }
+
+    .main-cont {
+      font-family: 'Ubuntu', sans-serif;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 85px auto;
+      height: 100vh;
+}
+    .sidebar{
+      height: 65%;
+    }
+
+    .sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: #091429;
+    color: #ffffff;
+    }
+
+    #sidebar-wrapper {
+    min-height: 200vh;
+    /* position: fixed; */
+    width: 40vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    }
+
+    .hero-img {
+    height: 60vh;
+    width: 45vw;
+    align-self: center;
+    }
+
+    .sidebar-content {
+    margin: 45px 22px;
+  }
+  .icon {
+    height: 13px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+}
+.nav-txt {
+    font-size: 16px;
+    padding-bottom: 20px;
+  
+}
+.nav-txt a {
+    font-size: 1em;
+    font-weight: 600px;
+    padding-bottom: 20px;
+  
+}
+
+    .contact-form-btn:hover {
+    background-color: #0ABAB5;
+    border: 1px solid #0ABAB5;
+    cursor: pointer;
+    font-family: inherit;
+    }
+    .contact-form-btn {
+    width: 155px;
+    padding: 10px 20px;
+    font-size: 18px;
+    align-self: center;
+    color: #ffffff;
+    background-color: #0ABAB5;
+    border: 1px solid #0ABAB5;
+    font-family: inherit;
+    }
+    
+    .content>h4 {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 60px 15vw;
+    font-family: inherit;
+}
+  </style>
+
   <body>
     <div class="main-cont">
       <div class="header">
