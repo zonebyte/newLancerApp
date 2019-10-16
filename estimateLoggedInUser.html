@@ -72,7 +72,7 @@
 
         .header-lists {
             display: flex;
-            justify-content: center;
+            justify-content:center;
             align-items: center;
             margin-right: 1rem !important;
             margin-left: 4rem !important;
@@ -82,16 +82,9 @@
 
         .header-lists li {
             display: inline-block;
-           
+           margin-right: 20px;
         }
-        .login {
-            margin-left: 30px;
-           
-        }
-
-        .profile-photo {
-            border-radius: 50%;
-        }
+      
 
         .support-icon {
             height: 30px;
@@ -106,8 +99,11 @@
         .profile-photo {
             height: 40px;
             width: auto;
+            
         }
-
+        .profile-photo img {
+            border-radius: 50%;
+        }
         .support-list {
             display: inline-grid !important;
             grid-template-columns: 1fr 2fr;
@@ -307,10 +303,10 @@
                 right: 0;
                 top: 1px;
                 height: 20px;
-                width: 28px;
+                width: 18px;
                 cursor: pointer;
-                margin-right: 1.6rem;
-                padding-right: 0 !important;
+                margin-right: 0.6rem;
+               
             }
 
             .hamburger-btn {
@@ -321,7 +317,7 @@
                 background: black;
                 position: absolute;
                 right: 0rem;
-                top: 12px;
+                top: 9px;
                 width: 25px;
                 height: 3px;
                 transition: 0.5s all ease;
@@ -420,14 +416,17 @@
                 height: 15px;
                 width: auto;
             }
-
+            #menuBtn {
+                margin-right: 0;
+            }
             .support-list span {
                 font-size: 14px;
             }
 
             .notification-icon {
                 height: 16px;
-                width: auto;
+                
+              
             }
 
             .profile-photo {
@@ -439,7 +438,7 @@
             }
 
             .header-lists {
-                margin-right: 0 !important;
+                margin-right: 20%;
                 margin-left: 0 !important;
             }
 
@@ -450,16 +449,20 @@
             .hamburger-btn {
                 top: 11px;
                 height: 2px;
+                padding-right: 0;
+                margin-right: 1px !important;
             }
 
             .hamburger-btn::before {
                 top: -6px;
                 height: 2px;
+                margin-right: 1px !important;
             }
 
             .hamburger-btn::after {
                 top: 6px;
                 height: 2px;
+                margin-right: 1px !important;
             }
 
             .cross-hamburger::before {
@@ -482,7 +485,11 @@
             main {
                 margin-top: 7rem;
             }
-
+            .header-lists{
+                margin-right:20px;
+            }
+           
+            }
             .sign-up {
             width: 5.0rem;
             margin-right: 0rem;
@@ -503,11 +510,18 @@
             </div>
             <div>
                 <ul class="header-lists">
-                    <li>
-                        <a href="/signin.html" class="login" > <span></span></a>
-                    </li>
+                    
                     <li class="profile-list">
-                        <a href="/signup.html" class="sign-up"> <span> </span> </a>
+                        <a href="clientInformation.html" class="support-icon"><img src="https://res.cloudinary.com/mide358/image/upload/v1571239047/help_skaspu.png"
+                            alt="" srcset="">Support <span> </span> </a>
+                    </li>
+                    <li>
+                        <a href=" " class="notification-icon" > <img src="https://res.cloudinary.com/mide358/image/upload/v1571239022/notification_mysvnj.png" 
+                            alt="" srcset=""><span></span></a>
+                    </li>
+                    <li>
+                        <a href="/signin.html" class="profile-photo" ><img src="https://res.cloudinary.com/mide358/image/upload/v1571239118/images_gscs6c.png"
+                            alt="" srcset=""> Juliet <i class="fa fa-angle-down"></i><span></span></a>
                     </li>
                     <li class="hamburger" id="menuBtn">
                         <span class="hamburger-btn"></span>
