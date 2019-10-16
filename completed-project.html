@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Projects</title>
+    <title>Collapsible sidebar using Bootstrap 4</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -117,7 +117,6 @@
           padding-bottom: 0px;
           background-color: #fff;
           border: none;
-          height: 70px;
           border-radius: 0;
           margin-bottom: 10px;
           box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -151,8 +150,8 @@
           perspective: 1500px;
         }
         #sidebar {
-          min-width: 220px;
-          max-width: 220px;
+          min-width: 250px;
+          max-width: 250px;
           background: var(--primary-color);
           color: #fff;
           transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
@@ -175,8 +174,7 @@
           padding: 10px;
         }
         #sidebar ul li a {
-          padding: 1.2rem 0rem;
-          padding-left: 40px;
+          padding: 10px;
           font-size: 1em;
           font-weight: 600;
           display: block;
@@ -246,7 +244,6 @@
           height: 40px;
           background: #f5f5f5;
           cursor: pointer;
-          display: none;
         }
         #sidebarCollapse span {
           width: 80%;
@@ -279,47 +276,20 @@
             border-color: rgba(201, 133, 70,0.3);
         }
 
-        .py-0{
-           
-            padding: 5px 15px !important;
-            border-radius: 0;
-            border: none
-        }
         .alert.alert-primary.py-0.px-2.small.m-0.active{
             color: #179615;
             font-weight: bold;
-            background-color: #C4C4C4;
-            border-color:  #C4C4C4;
+            background-color: #76D874;
+            border-color:  #76D874;
         }
-
-
-        .container-fluid .input-group{
-            margin-left: 400px;
-            width: 350px;
-        }
-      
-        .container-fluid .mydrop-down {
-            width: 300px;
-        }
-
-
         /* ---------------------------------------------------
             MEDIAQUERIES
         ----------------------------------------------------- */
-        @media (max-width: 616px) {
+        @media (max-width: 768px) {
           #sidebar {
-            margin-left: -220px;
+            margin-left: -250px;
             transform: rotateY(90deg);
           }
-
-          #sidebarCollapse {
-            width: 40px;
-            height: 40px;
-            background: #f5f5f5;
-            cursor: pointer;
-            display:block;
-          }
-
           #sidebar.active {
             margin-left: 0;
             transform: none;
@@ -343,140 +313,8 @@
           #sidebarCollapse.active span:last-of-type {
             transform: rotate(-45deg) translate(1px, -1px);
           }
-
-          .container-fluid .input-group{
-            margin-left: -20px;
-            width: 220px;
-            }
-
-          .container-fluid .mydrop-down {
-            width: 100%;
-            }
-
-          .container-fluid .mydrop-down {
-            width: 100%;
-            }
-
-            .container-fluid{
-                margin-left: 40px;
-            }
         }
 
-
-        @media (max-width: 533px) {
-            #sidebar {
-              margin-left: -220px;
-              transform: rotateY(90deg);
-            }
-  
-            #sidebarCollapse {
-              width: 40px;
-              height: 40px;
-              background: #f5f5f5;
-              cursor: pointer;
-              display:block;
-            }
-  
-            #sidebar.active {
-              margin-left: 0;
-              transform: none;
-            }
-            #sidebarCollapse span:first-of-type,
-            #sidebarCollapse span:nth-of-type(2),
-            #sidebarCollapse span:last-of-type {
-              transform: none;
-              opacity: 1;
-              margin: 5px auto;
-            }
-            #sidebarCollapse.active span {
-              margin: 0 auto;
-            }
-            #sidebarCollapse.active span:first-of-type {
-              transform: rotate(45deg) translate(2px, 2px);
-            }
-            #sidebarCollapse.active span:nth-of-type(2) {
-              opacity: 0;
-            }
-            #sidebarCollapse.active span:last-of-type {
-              transform: rotate(-45deg) translate(1px, -1px);
-            }
-  
-            .container-fluid .input-group{
-              margin-left: -100px;
-              width: 100px;
-              padding-left: -200px;
-              }
-  
-            .container-fluid .mydrop-down {
-              width: 100%;
-              }
-  
-              .container-fluid{
-                  margin-left: -40px;
-              }
-          }
-
-          @media (max-width: 1024px) {
-            #sidebar {
-              margin-left: -220px;
-              transform: rotateY(90deg);
-            }
-  
-            #sidebarCollapse {
-              width: 40px;
-              height: 40px;
-              background: #f5f5f5;
-              cursor: pointer;
-              display:block;
-            }
-  
-            #sidebar.active {
-              margin-left: 0;
-              transform: none;
-            }
-            #sidebarCollapse span:first-of-type,
-            #sidebarCollapse span:nth-of-type(2),
-            #sidebarCollapse span:last-of-type {
-              transform: none;
-              opacity: 1;
-              margin: 5px auto;
-            }
-            #sidebarCollapse.active span {
-              margin: 0 auto;
-            }
-            #sidebarCollapse.active span:first-of-type {
-              transform: rotate(45deg) translate(2px, 2px);
-            }
-            #sidebarCollapse.active span:nth-of-type(2) {
-              opacity: 0;
-            }
-            #sidebarCollapse.active span:last-of-type {
-              transform: rotate(-45deg) translate(1px, -1px);
-            }
-  
-            #content .container-fluid{
-                margin-left: 0px;
-               
-                }
-
-            .container-fluid .input-group{
-              margin-left: 60px;
-              width: 150px;
-              }
-  
-            .container-fluid .mydrop-down {
-              width: 100%;
-              }
-  
-            .container-fluid .mydrop-down {
-              width: 100%;
-              }
-          }
-
-             
-          
-  
-  
         /* ---------------------------------------------------
             Table
         ----------------------------------------------------- */
@@ -487,7 +325,6 @@
 
         table.project-table tbody tr{
           padding-bottom: 10px !important;
-          width: 100px;
         }
 
         table.project-table tbody tr td span.text-small{
@@ -531,7 +368,7 @@
                         <img src="https://lancer-app.000webhostapp.com/images/svg/home.svg" height="20" width="auto"> <span> Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="clientInformation.html">
+                    <a href="#">
                         <img src="https://lancer-app.000webhostapp.com/images/svg/customer.svg" height="20" width="auto"> <span> Client</span>
                     </a>
                 </li>
@@ -539,25 +376,25 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://lancer-app.000webhostapp.com/images/svg/lightbulb.svg" height="20" width="auto"> <span> Projects</span></a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#" class="pl-4">Status</a>
+                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Status</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4">Overview</a>
+                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Overview</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4 ">Collabrators</a>
+                            <a href="#" class="pl-4 "><i class="fas fa-dot-circle"></i> Collabrators</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4">Task</a>
+                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Task</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4"> Documents</a>
+                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Documents</a>
                         </li>
                         
                     </ul>
                 </li>
                 <li>
-                    <a href="Invoice-new-user.html">
+                    <a href="#">
                         <img src="https://lancer-app.000webhostapp.com/images/svg/approve-invoice.svg" height="20" width="auto"> <span> Invoice</span>
                     </a>
                 </li>
@@ -573,7 +410,6 @@
                 </li>
             </ul>
         </nav>
-        
         <!-- Page Content Holder -->
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
@@ -599,13 +435,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link p-3" href="contact-support.html"><img src="https://lancer-app.000webhostapp.com/images/svg/help.svg" height="25" width="auto"> <span class="d-lg-none d-xl-none"> You need help?</span></a>
+                                <a class="nav-link p-3" href="#"><img src="https://lancer-app.000webhostapp.com/images/svg/help.svg" height="25" width="auto"> <span class="d-lg-none d-xl-none"> You need help?</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link border-left p-3" href="#"><img src="https://lancer-app.000webhostapp.com/images/svg/alarm-clock.svg" height="25" width="auto"> <span class="d-lg-none d-xl-none"> Reminder</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link border-left p-3" href="notification.html"><img src="https://lancer-app.000webhostapp.com/images/svg/notification.svg" height="25" width="auto"> <span class="d-lg-none d-xl-none"> Notification</span></a>
+                                <a class="nav-link border-left p-3" href="#"><img src="https://lancer-app.000webhostapp.com/images/svg/notification.svg" height="25" width="auto"> <span class="d-lg-none d-xl-none"> Notification</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link border-left p-3" href="#"><span class="border rounded-circle p-1 font-weight-bold">AU</span> <span class="d-lg-none d-xl-none"> Hello John</span></a>
@@ -621,7 +457,7 @@
                     <div class="">
                         <div class="">
                             <form class="form-inline">
-                                <select class="form-control status mydrop-down">
+                                <select class="form-control status">
                                     <option value="All">All</option>
                                     <option value="Completed">Completed</option>
                                     <option value="Pending">Pending</option>
