@@ -253,6 +253,10 @@ svg {
     border-color: #0ABAB5;
 }
 
+.toggleNav {
+    display: none;
+  }
+
 
 @media (max-width: 992px) {    
 #sidebar-wrapper {
@@ -497,6 +501,9 @@ tbody, .bold {
     width: 100%;
      /*margin-left: 0;*/
   }
+  .toggleNav {
+    display: block;
+  }
 }
 </style>
 
@@ -552,7 +559,7 @@ tbody, .bold {
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-
+ <a href="#" class="toggleNav navbar-toggler">☰</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -735,6 +742,16 @@ tbody, .bold {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    
+    $(function() {
+      $('.toggleNav').on('click',function() {
+        $('#sidebar-wrapper').slideToggle();
+      });
+    });
+
+  </script>
 </body>
 
 </html>
