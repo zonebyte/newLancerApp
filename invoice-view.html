@@ -19,6 +19,7 @@
 
     *{
         box-sizing: border-box;
+        font-family: 'Ubuntu', sans-serif;
     }
     table {
         border-spacing: 5px;
@@ -233,7 +234,7 @@ svg {
     color: #000;
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: #0ABAB5;
+  color: #0ABAB5;
 }
 .btn-outline-dark {
         font-family: Ubuntu;
@@ -243,6 +244,19 @@ svg {
 .btn.bg {
     color: #fff;
     background-color: #0ABAB5;
+}
+.KOstyle{
+  color: #0ABAB5;
+  border:  3px solid #0ABAB5;
+}
+.KOstyle1{
+  /* background-color: rgb(54, 230, 224); */
+  background-color: #0ABAB5;
+  border: 2px solid #0ABAB5;
+  border-radius: 10px;
+}
+.KOheader{
+  color:#546067;
 }
 @media (max-width: 992px) {    
 #sidebar-wrapper {
@@ -556,10 +570,10 @@ tbody, .bold {
       <section class="invoice-body ml-4"> 
           <div class="container ">
               <div class="row mt-5 ml-4">
-                <button type="button" class="btn btn-outline-dark ">Print</button>
-                <button type="button" class="btn btn-outline-dark ml-4">Download as PDF   </button>
-                <button type="button" class="btn btn-outline-dark ml-auto">Edit</button>
-                <button type="button" class="btn btn-primary ml-4">Other actions</button>
+                <button type="button" class="btn btn-outline-dark KOstyle">Print</button>
+                <button type="button" class="btn btn-outline-dark ml-4 KOstyle">Download as PDF   </button>
+                <button type="button" class="btn btn-outline-dark ml-auto KOstyle">Edit</button>
+                <button type="button" class="btn btn-primary ml-4 KOstyle1" >Other actions</button>
               </div>
           </div>
       </section>
@@ -569,7 +583,7 @@ tbody, .bold {
             <section id="showcase ">
                 <div class="row container pt-3 ">
                     <div class="col-6 mb-4">
-                        <h1> Invoice </h1>
+                        <h1 class="KOheader"> Invoice </h1>
                         <address contenteditable="">
                             <p> <b>Project:</b> branding and marketing</p>
                             <p> <b>Lancer:</b> Endurance dan-jumbo</p>
@@ -617,7 +631,7 @@ tbody, .bold {
             <section class="invoice-description mt-4    ">
 
                     <table class="table table-responsive container " style="width: 100%">
-                        <thead class="thead" style="background-color: #009FFF; color: white;">
+                        <thead class="thead" style="background-color: #091429; color: white;">
                             <tr>
                                 <th scope="col" class="">Description</th>
                                 <th> </th>
