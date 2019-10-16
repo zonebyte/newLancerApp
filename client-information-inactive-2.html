@@ -185,8 +185,7 @@
                 <label for="company_name">Company name</label>
                 <input type="text" name="company_name" id="Cname" placeholder="e.g Sunshine Studio">
                 
-                <span>REQUIRED</span>
-            </div>
+                </div>
 
 
             <h5>Business Address</h5>
@@ -253,34 +252,23 @@
                 <label for="company_name">Contact email</label>
                 <input type="email" name="email" id="email" placeholder="e.g email@domain.com">
 
-       <!-- -------------------------TEMPLATE ----------------------- -->
+       <!-- -------------------------TEMPLATE ----------------------
        <div id="myStyl"  style="display: none">      
                 <label for="company_name">Contact name</label>
                 <input type="text" name="contact_name" id="Contact-name" placeholder="e.g Ben Davies">
                 <label for="company_name">Contact email</label>
                 <input type="email" name="email" id="email" placeholder="e.g email@domain.com">
-        </div>
+        </div>- -->
 
             </div>
-            <h5>Add other contacts <!--&nbsp;--> <input type="button" value="+" onclick="addFile();" /></h5>
+            <h5>Add other contacts &nbsp; + </h5>
         </section>
         <section>
         <button>Next</button>
         </section>
-        
-              
-  
->
+      
     </main>
     </div>
-    <script>
-            var fileId = 0; // used by the addFile() function to keep track of IDs
-    function addFile() {
-        fileId++; // increment fileId to get a unique ID for the new element
-        let html = '<input type="file" name="uploaded_files[]" /> ' +
-                '<a href="" onclick="javascript:removeElement('file-' + fileId + ''); return false;">Remove</a>';
-        addElement('files', 'p', 'file-' + fileId, html);
-    }
-    </script>
+    
 </body>
 </html>
