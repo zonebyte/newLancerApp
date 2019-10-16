@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Invoice View</title>
+    <title>Lancer-tool</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
@@ -36,6 +36,15 @@ img {
       width: .85rem;
       margin-right: .5rem;
       margin-left: 1.8rem;
+}
+.container{
+  display:flex;
+}
+.doc-file{
+  padding:100px;
+}
+.doc-file1{
+  margin-left:100px;
 }
 .imgSvg {
     padding-left: unset;
@@ -142,6 +151,7 @@ svg {
     color: #fff;
     background-color: #0ABAB5;
 }
+
 @media (max-width: 992px) {    
 #sidebar-wrapper {
   height: 80vw;
@@ -314,8 +324,8 @@ img {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-left mt-2 mt-lg-0">
-            <li class="nav-item ml-3 active">
-              <a class="nav-link " href="#">Project Info <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link " href="#">Project Info </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Client Info</a>
@@ -323,8 +333,8 @@ img {
             <li class="nav-item">
               <a class="nav-link" href="#">Settings</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tools & Resources</a>
+            <li class="nav-item ml-3 active">
+              <a class="nav-link" href="#">Tools & Resources <span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
@@ -332,8 +342,29 @@ img {
 
       <section class="invoice-body ml-4"> 
           <div class="container ">
-              
+            <div>
+             <a href="#"><svg class="imgSvg1" width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M190.375 30H89.75C82.125 30 74.8123 33.2239 69.4207 38.9625C64.029 44.7011 61 52.4844 61 60.6V305.4C61 313.516 64.029 321.299 69.4207 327.037C74.8123 332.776 82.125 336 89.75 336H262.25C269.875 336 277.188 332.776 282.579 327.037C287.971 321.299 291 313.516 291 305.4V137.1L190.375 30Z" fill="#091429"/>
+              <path opacity="0.5" d="M190 30V137H291" fill="white"/>
+              <line x1="110" y1="267.724" x2="241.983" y2="267.724" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="110" y1="192" x2="241.983" y2="192" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="110" y1="229.862" x2="241.983" y2="229.862" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></a>
+              <p><a href="#"class="doc-file1" >Generate an NDA</a></p>
+            </div>
+            <div>
+              <a href="#"><svg class="imgSvg2" width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M190.375 30H89.75C82.125 30 74.8123 33.2239 69.4207 38.9625C64.029 44.7011 61 52.4844 61 60.6V305.4C61 313.516 64.029 321.299 69.4207 327.037C74.8123 332.776 82.125 336 89.75 336H262.25C269.875 336 277.188 332.776 282.579 327.037C287.971 321.299 291 313.516 291 305.4V137.1L190.375 30Z" fill="#091429"/>
+              <path opacity="0.5" d="M190 30V137H291" fill="white"/>
+              <line x1="110" y1="267.724" x2="241.983" y2="267.724" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="110" y1="192" x2="241.983" y2="192" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="110" y1="229.862" x2="241.983" y2="229.862" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></a>
+              <p><a href="#" class="doc-file">Generate a Contract</a></p>
+            </div>
+
           </div>
+
       </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
