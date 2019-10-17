@@ -119,11 +119,24 @@
      .form-group input {
          margin-bottom: 15px;
          width: 90%;
+         height: 40px;
          padding: 0 10px;
+
      }
-        
+     .required input{
+        padding-right: 60px;
+     }
+     .required p {
+         font-size: 12px;
+         color: #00F9FF;
+         margin: 0%;
+         padding: 0%;
+         position: relative;
+         top: -50%;
+         left: 75%;
+     }  
      .country {
-         height: 29px;
+         height: 40px;
          overflow: hidden;
          width: 80%;
      } 
@@ -156,11 +169,31 @@
         }
          
           .country {
-         height: 29px;
+         height: 40px;
          overflow: hidden;
          width: 80%;
       }
      }
+     
+     @media screen and (max-width: 500px) {
+        .required p {
+         font-size: 8px;
+         position: relative;
+         top: 0%;
+         left: -10%;
+         text-align: right;
+         } 
+         .form-group input{
+             margin: 5px 0px 0px 0px;
+         } 
+         .required input{
+        padding-right: 10px;
+        }
+         .country{
+            margin-top: 5px;
+         }
+     }
+     
 
    </style>  
     
@@ -183,7 +216,11 @@
             <h4>Business Information</h4>
             <div class="form-group">
                 <label for="company_name">Company name</label>
-                <input type="text" name="company_name" id="Cname" placeholder="e.g Sunshine Studio">
+                <div class="required">
+                    <input type="text" name="company_name" id="Cname" placeholder="e.g Sunshine Studio">
+                    <p>required</p>
+                </div>
+                
                 
                 </div>
 
@@ -246,11 +283,19 @@
                 <label for="company_name">Contact name</label>
                 <input type="text" name="contact_name" id="Contact-name" placeholder="e.g Ben Davies">
                 <label for="company_name">Contact email</label>
-                <input type="email" name="email" id="email" placeholder="e.g email@domain.com">
+                <div class="required">
+                    <input type="email" name="email" id="email" placeholder="e.g email@domain.com">
+                    <p>required</p>
+                </div>
+                
                 <label for="company_name">Contact name</label>
                 <input type="text" name="contact_name" id="Contact-name" placeholder="e.g Ben Davies">
                 <label for="company_name">Contact email</label>
-                <input type="email" name="email" id="email" placeholder="e.g email@domain.com">
+                <div class="required">
+                    <input type="email" name="email" id="email" placeholder="e.g email@domain.com">
+                    <p>required</p>
+                </div>
+                
 
        <!-- -------------------------TEMPLATE ----------------------
        <div id="myStyl"  style="display: none">      
