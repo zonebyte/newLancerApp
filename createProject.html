@@ -125,140 +125,22 @@
             
 
 
-            /* .info{
-                width: 25rem;
-            } */
 
-    /*     
-            .body-next {
-                display: block;
-                margin: 5rem auto;
-            }
-        
-            main {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 7rem;
-            }
-            main .container {
-                width: 70%;
-            }
-            main .container h1 {
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 5rem;
-                margin-bottom: 5rem;
-            }
-            main .container .projects {
-                width: 100%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 8%;
-            }
-            .project-item {
-                padding: 3rem;
-                border: 0.1rem solid #999999;
-                height: 40rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-        
-                transition: all 200ms ease-in-out;
-            }
-            .project-item.active {
-                border: 5px solid #0abab5;
-            }
-            .project-item h3 {
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 3rem;
-            }
-            .project-item p {
-                margin-top: -10rem;
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 2rem;
-                color: #999999;
-            }
-            .project-item select,
-            .project-item input {
-                width: 100%;
-                padding: 1.5rem;
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 2rem;
-        
-                color: rgba(145, 145, 145, 0.5);
-            }
-            .disable-project {
-                border-color: rgba(153, 153, 153, 0.5);
-            }
-            .disable-project h3,
-            .disable-project p,
-            .disable-project select,
-            .disable-project input {
-                color: rgba(153, 153, 153, 0.5);
-            }
-            .btn-active {
-                background: #0abab5;
-            }
-        
-            /* Media Queries */
-            /* @media screen and (max-width: 1300px) {
-                .body-next {
-                margin: 8rem auto;
-                }
-                main .container {
-                width: 80%;
-                }
-                main .container h1 {
-                font-size: 4rem;
-                text-align: center;
-                }
-                main .container .projects {
-                width: 100%;
-                display: grid;
-                gap: 8%;
-                }
-                header {
-                height: 6rem;
-                }
-                header .next {
-                height: 6rem;
-                width: 15rem;
-                font-size: 3rem;
-                }
-            }
-            @media screen and (max-width: 900px) {
-                main .container .projects {
-                width: 70%;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 1fr;
-                margin: 0 auto;
-                }
-            }
-            @media screen and (max-width: 660px) {
-                main .container {
-                width: 95%;
-                }
-            } */ */
         </style>
     </head>
 
 
     
     <body>
+        <!-- header starts here  -->
         <header>
             <button class="hc-cancel">X</button>
             <h1>Create Estimate</h1>
             <button class="hc-next">Next</button>
         </header>
+        <!-- header ends here  -->
+
+        <!-- beginning of main content  -->
 
         <div class="case">
             <div class="intro">
@@ -331,46 +213,11 @@
                 <button class="btn btn-secondary btn-lg">NEXT</button>
             </div>
         </div>
+        <!-- end of main content  -->
 
 
-        <!-- <main>
-            <div class="container">
-                <h1>What project are you estimating?</h1>
         
-                <div class="projects">
-                    <div class="project-old project-item">
-                        
-                        <h3>A previously created project</h3>
-                        <p>
-                        Find estimate for previously created project. By doing so the
-                        estimate get populated with some of the data
-                        </p>
-                        <select name="old-project">
-                        <option value="" selected disabled>Select Project</option>
-                        <option value="random">Random</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                        </select>
-                    </div>
-                    <div class="project-new project-item">
-                        <h3>A new project</h3>
-                        <p>
-                        Create a new estimate and set up a new project based on the
-                        information.
-                        </p>
-                        <input
-                        name="new-project"
-                        type="text"
-                        placeholder="Project Name"
-                        required
-                        />
-                    </div>
-                </div>
-                <button class="next body-next">Next</button>
-            </div>
-        </main> -->
-
-        <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
