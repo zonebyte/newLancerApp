@@ -1,5 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +16,7 @@
         <link rel="stylesheet" href="styles/create-estimate.css">
 </head>
 <body>
-    <div class="contaner">
+    <div class="container">
 
         <div id="container">
 
@@ -25,63 +29,304 @@
             <div>
                 <input class="nav" id="ext" type="button" value="NEXT">
             </div>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
 
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        box-sizing: border-box;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+        width: 100%;
+        box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+        /* background-color: #f8f9fa; */
+      }
+      header .cancel {
+        width: 10rem;
+        height: 100%;
+        border: none;
+        background-color: white;
+        border-right: 0.2rem solid #c4c4c4;
+        color: #c4c4c4;
+        font-size: 3.5rem;
+        font-family: "Ubuntu", sans-serif;
+      }
+      header h1 {
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+      .next {
+        width: 30rem;
+        height: 10rem;
+        border: none;
+        background: rgba(196, 196, 196, 0.4);
+        color: white;
+        font-size: 2.8rem;
+        font-family: "Ubuntu", sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        transition: all 200ms ease-in-out;
+      }
+
+      .body-next {
+        display: block;
+        margin: 5rem auto;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7rem;
+      }
+      main .container {
+        width: 70%;
+      }
+      main .container h1 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5rem;
+        margin-bottom: 5rem;
+      }
+      main .container .projects {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8%;
+      }
+      .project-item {
+        padding: 3rem;
+        border: 0.1rem solid #999999;
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        transition: all 200ms ease-in-out;
+      }
+      .project-item.active {
+        border: 5px solid #0abab5;
+      }
+      .project-item h3 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+      .project-item p {
+        margin-top: -10rem;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+        color: #999999;
+      }
+      .project-item select,
+      .project-item input {
+        width: 100%;
+        padding: 1.5rem;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+
+        color: rgba(145, 145, 145, 0.5);
+      }
+      .disable-project {
+        border-color: rgba(153, 153, 153, 0.5);
+      }
+      .disable-project h3,
+      .disable-project p,
+      .disable-project select,
+      .disable-project input {
+        color: rgba(153, 153, 153, 0.5);
+      }
+      .btn-active {
+        background: #0abab5;
+      }
+
+      /* Media Queries */
+      @media screen and (max-width: 1300px) {
+        .body-next {
+          margin: 8rem auto;
+        }
+        main .container {
+          width: 80%;
+        }
+        main .container h1 {
+          font-size: 4rem;
+          text-align: center;
+        }
+        main .container .projects {
+          width: 100%;
+          display: grid;
+          gap: 8%;
+        }
+        header {
+          height: 6rem;
+        }
+        header .next {
+          height: 6rem;
+          width: 15rem;
+          font-size: 3rem;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        main .container .projects {
+          width: 70%;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 660px) {
+        main .container {
+          width: 95%;
+        }
+      }
+    </style>
+    <title>Lancer - Estimate</title>
+  </head>
+  <body>
+    <header>
+      <button class="cancel">X</button>
+      <h1>Create Estimate</h1>
+      <button class="next">Next</button>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>What project are you estimating?</h1>
+
+        <div class="projects">
+          <div class="project-old project-item">
+            <!-- To create the disable style in the case of abscence of old projects, add 'disable-project' to the classes of this element and add the 'disabled' property to the 'select' element -->
+
+            <h3>A previously created project</h3>
+            <p>
+              Find estimate for previously created project. By doing so the
+              estimate get populated with some of the data
+            </p>
+            <select name="old-project">
+              <option value="" selected disabled>Select Project</option>
+              <option value="random">Random</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <div class="project-new project-item">
+            <h3>A new project</h3>
+            <p>
+              Create a new estimate and set up a new project based on the
+              information.
+            </p>
+            <input
+              name="new-project"
+              type="text"
+              placeholder="Project Name"
+              required
+            />
+          </div>
         </div>
+        <button class="next body-next">Next</button>
+      </div>
+    </main>
 
+    <script>
+      let nextButtons = Array.from(document.querySelectorAll(".next"));
+      let newProjectPanel = document.querySelector(".project-new");
+      let oldProjectPanel = document.querySelector(".project-old");
+      let newInput = document.querySelector("input[name='new-project']");
+      let oldInput = document.querySelector("select[name='old-project']");
 
+      newInput.addEventListener("focus", e => {
+        nextButtons.map(button => {
+          if (!button.classList.contains("btn-active")) {
+            button.classList.add("btn-active");
+          }
+        });
+        if (oldProjectPanel.classList.contains("active")) {
+          oldProjectPanel.classList.remove("active");
+        }
+        newProjectPanel.classList.add("active");
+      });
+      newInput.addEventListener("blur", e => {
+        nextButtons.map(button => {
+          if (button.classList.contains("btn-active")) {
+            button.classList.remove("btn-active");
+          }
+          if (oldProjectPanel.classList.contains("active")) {
+            oldProjectPanel.classList.remove("active");
+          }
+          newProjectPanel.classList.remove("active");
+        });
+      });
 
-        <h1 class="">What project are you estimating?</h1>
-        <div class="row ml-auto mr-auto box justify-content-center">
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">A previously created project</h5>
-                        <p class="card-text">Find estimate for a previously created project, by doing so the
-                            estimate
-                            gets populated with some of the data. </p>
-                        <!-- <div class="d-flex"> -->
-                        <div class="dropdown mr-1">
-                            <button type="button" class="btn btn-on btn-secondary dropdown-toggle"
-                                id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false" data-offset="10,20">
-                                Select Project
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                                <a class="dropdown-item" href="#">Glacier Fintech App</a>
-                                <a class="dropdown-item" href="#">AB Technology Solutions Branding</a>
+      oldInput.addEventListener("mouseenter", e => {
+        nextButtons.map(button => {
+          if (!button.classList.contains("btn-active")) {
+            button.classList.add("btn-active");
+          }
+        });
+        if (newInput === document.activeElement) {
+          oldInput.addEventListener("click", e => {
+            newInput.blur();
+            oldProjectPanel.classList.add("active");
+          });
+        } else {
+          oldProjectPanel.classList.add("active");
+        }
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">A new project</h5>
-                        <p class="card-text">Create a new estimate and set up a new project based on the
-                            information.
-                        </p>
-                        <input type="text" name="Project Name" id="name" placeholder="Project Name">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <button type="button" class="btn dark">NEXT</button>
-    </div>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
-
+        document.addEventListener("click", e => {
+          if (
+            e.target !== oldProjectPanel &&
+            e.target !== newProjectPanel &&
+            e.target.parentElement !== oldProjectPanel &&
+            e.target.parentElement !== newProjectPanel
+          ) {
+            console.log("none");
+            nextButtons.map(button => {
+              if (button.classList.contains("btn-active")) {
+                button.classList.remove("btn-active");
+              }
+              oldProjectPanel.classList.remove("active");
+            });
+          }
+        });
+      });
+      // oldInput.addEventListener("blur", e => {
+      //   nextButtons.map(button => {
+      //     if (button.classList.contains("btn-active")) {
+      //       button.classList.remove("btn-active");
+      //     }
+      //     oldProjectPanel.classList.remove("active");
+      //   });
+      // });
+    </script>
+  </body>
 </html>
