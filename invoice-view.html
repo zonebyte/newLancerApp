@@ -418,13 +418,14 @@ img {
 #sidebar-wrapper .sidebar-heading {
   padding: 0.975rem 2.3rem;
   font-size: 1.15rem;
+  color: #fff;
 }
 .btn-outline-dark {
         font-size: 10px;
     padding: .275rem .5rem;
 }
 .btn-outline-dark.ml-4 {
-    margin-left: .5rem!important;
+    margin-left: 0rem!important;
 }
 h1 {
         font-size: 16px;
@@ -464,6 +465,7 @@ tbody, .bold {
         /* display: none; */
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     #page-content-wrapper {
@@ -473,11 +475,13 @@ tbody, .bold {
     
     .invoice-body.ml-4 button {
       display: block !important;
-      margin: 0.3rem auto;
+      margin: 0.3rem 0;
+      margin-left: 0% !important
+      ;
       width: 100%;
     }
     #sidebar-wrapper {
-    width: 15vh;
+      width: 25vh;
     height: 92vw;
   }
 img {
@@ -497,6 +501,7 @@ img {
 #sidebar-wrapper .sidebar-heading {
   padding: 0.975rem 2.1rem;
   font-size: .9rem;
+  color: #fff;
 }
 .invoice-container {
     width: 68vw;
@@ -532,9 +537,7 @@ tbody, .bold {
     font-size: .55rem;
     }
 
-    /*.toggleDesktop {
-      display: block;
-    }*/
+    
 }
 @media (max-width: 450px) {
     #sidebar-wrapper {
@@ -552,13 +555,13 @@ tbody, .bold {
 #page-content-wrapper {
     min-width: 0;
     width: 100%;
-     /*margin-left: 0;*/
+    
   }
   .toggleNav {
     display: block;
     display: inline-block;
   margin-left: 10px;
-  /*border: 1px solid red;*/
+  
   padding: .25rem .75rem;
   line-height: 1;
   background-color: transparent;
@@ -586,7 +589,9 @@ tbody, .bold {
 
     <!-- Sidebar -->
     <div class="bg-dark border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Lan<span class="colorC">c</span>ers </div>
+      <a href="index.html">
+        <div class="sidebar-heading">Lan<span class="colorC">c</span>ers </div>
+      </a>
       <div class="list-group list-group-flush">
         <a href="documents.html" class="list-group-item list-group-item-action bg-dark"><img src="https://res.cloudinary.com/samtech/image/upload/v1570727367/home.svg" alt=""> Dashboard</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="https://res.cloudinary.com/samtech/image/upload/v1570727365/client.svg" alt=""> Client</a>
