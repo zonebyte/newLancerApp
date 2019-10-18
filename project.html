@@ -14,22 +14,16 @@
     <!-- <link rel="stylesheet" href="style/project.css"> -->
     <style type="text/css">
         /*Main page style by message*/
-
         @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
         :root{
             --primary-color: #091429;
             --secondary-color: #0ABAB5;
             --dark-color: #262626;
             --light-color: #B1B1B1;
         }
-
-
            /****************************/
           /*------- main styles ------*/
          /****************************/
-
-
         .text-primary{
             color: var(--primary-color) !important;
         }
@@ -103,7 +97,6 @@
             border-color: inherit !important;
             opacity: 0.8 !important;
         }
-
         /*------Nav bar---------*/
         a,
         a:hover,
@@ -137,10 +130,21 @@
           border-bottom: 1px dashed #ddd;
           margin: 40px 0;
         }
-
         .wrapper #content{
-
         }
+        .dropdown-menu{
+          background: #091429;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .dropdown-item {
+          font-family: Open Sans;
+          font-style: normal;
+          line-height: 30px;
+          color: #EEEEEE;
+        }
+        .dropdown-menu {
+  right: 3px;
+}
         /* ---------------------------------------------------
             SIDEBAR STYLE
         ----------------------------------------------------- */
@@ -271,14 +275,12 @@
           opacity: 1;
           margin: 5px auto;
         }
-
         .alert.alert-primary.py-0.px-2.small.m-0.pending{
             color: #F67A06;
             font-weight: bold;
             background-color: rgba(201, 133, 70,0.3);
             border-color: rgba(201, 133, 70,0.3);
         }
-
         .py-0{
            
             padding: 5px 15px !important;
@@ -291,8 +293,6 @@
             background-color: #C4C4C4;
             border-color:  #C4C4C4;
         }
-
-
         .container-fluid .input-group{
             margin-left: 400px;
             width: 350px;
@@ -301,8 +301,6 @@
         .container-fluid .mydrop-down {
             width: 300px;
         }
-
-
         /* ---------------------------------------------------
             MEDIAQUERIES
         ----------------------------------------------------- */
@@ -311,7 +309,6 @@
             margin-left: -220px;
             transform: rotateY(90deg);
           }
-
           #sidebarCollapse {
             width: 40px;
             height: 40px;
@@ -319,7 +316,6 @@
             cursor: pointer;
             display:block;
           }
-
           #sidebar.active {
             margin-left: 0;
             transform: none;
@@ -343,26 +339,20 @@
           #sidebarCollapse.active span:last-of-type {
             transform: rotate(-45deg) translate(1px, -1px);
           }
-
           .container-fluid .input-group{
             margin-left: -20px;
             width: 220px;
             }
-
           .container-fluid .mydrop-down {
             width: 100%;
             }
-
           .container-fluid .mydrop-down {
             width: 100%;
             }
-
             .container-fluid{
                 margin-left: 40px;
             }
         }
-
-
         @media (max-width: 533px) {
             #sidebar {
               margin-left: -220px;
@@ -415,7 +405,6 @@
                   margin-left: -40px;
               }
           }
-
           @media (max-width: 1024px) {
             #sidebar {
               margin-left: -220px;
@@ -458,7 +447,6 @@
                 margin-left: 0px;
                
                 }
-
             .container-fluid .input-group{
               margin-left: 60px;
               width: 150px;
@@ -472,7 +460,6 @@
               width: 100%;
               }
           }
-
              
           
   
@@ -484,27 +471,22 @@
           border-collapse:separate; 
           border-spacing: 0 1em;
         }
-
         table.project-table tbody tr{
           padding-bottom: 10px !important;
           width: 100px;
         }
-
         table.project-table tbody tr td span.text-small{
           font-size: 8px;
         } 
-
         table.project-table tbody tr td, table.project-table thead tr th {
             max-width: 200px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-
         .dropleft .dropdown-toggle::before{
           display: none;
         }
-
         /*------------floating button---------*/
         #add-something{
           position: fixed;
@@ -607,8 +589,16 @@
                             <li class="nav-item">
                                 <a class="nav-link border-left p-3" href="notification.html"><img src="https://lancer-app.000webhostapp.com/images/svg/notification.svg" height="25" width="auto"> <span class="d-lg-none d-xl-none"> Notification</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link border-left p-3" href="#"><span class="border rounded-circle p-1 font-weight-bold">AU</span> <span class="d-lg-none d-xl-none"> Hello John</span></a>
+                            <li class="nav-item mx-1 user-nav dropdown">
+                                <a class="nav-link border-left p-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"><span class="border rounded-circle p-1 font-weight-bold">AU</span></a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#"><img src="https://res.cloudinary.com/nxcloud/image/upload/v1571411201/Temmyjoy/Group_1_mvokcv.svg" alt="">&nbsp; My Profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><img src="https://res.cloudinary.com/nxcloud/image/upload/v1571411202/Temmyjoy/Group_m59pib.svg" alt="">&nbsp; Settings</a>
+                <a class="dropdown-item" href="#"><img src="https://res.cloudinary.com/nxcloud/image/upload/v1571411201/Temmyjoy/logout_b5dtea.svg" alt="">&nbsp; Logout</a>
+              </div>
+            </li>
                             </li>
                         </ul>
                     </div>
@@ -892,7 +882,6 @@
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
-
             const searchBox = document.querySelector('.searchBox');
             const status = document.querySelector('.status');
             const filterNames =()=>{
@@ -907,7 +896,6 @@
                     }
                 })
             }
-
             const filterStatus =()=>{
                 const statusText = document.querySelectorAll('.alert-primary')
                 
@@ -923,9 +911,7 @@
                      }
                 })  
             }
-
             searchBox.addEventListener('keyup', filterNames);
-
             status.addEventListener('change', filterStatus);
                
         });
