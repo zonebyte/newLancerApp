@@ -1,0 +1,656 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <title>Create Project</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        box-sizing: border-box;
+      }
+      header {
+        display: grid;
+        grid-template-columns: max-content max-content 1fr max-content;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+        width: 100%;
+        box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+        /* background-color: #f8f9fa; */
+      }
+      button {
+        cursor: pointer;
+      }
+      header .cancel,
+      header .back {
+        width: 10rem;
+        height: 100%;
+        border: none;
+        background-color: white;
+        border-right: 0.2rem solid #c4c4c4;
+        color: #c4c4c4;
+        font-size: 3.5rem;
+        font-family: "Ubuntu", sans-serif;
+      }
+      header h1 {
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+      .next {
+        width: 30rem;
+        height: 10rem;
+        border: none;
+        background: rgba(196, 196, 196, 0.4);
+        color: white;
+        font-size: 2.8rem;
+        font-family: "Ubuntu", sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all 200ms ease-in-out;
+      }
+      .body-next {
+        display: block;
+        margin: 5rem auto;
+      }
+      .btn-active {
+        background: #0abab5;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+      }
+      main .container {
+        width: 65%;
+      }
+      main .container h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5rem;
+      }
+      main .container p {
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+        color: #262626;
+        margin-bottom: 2.5rem;
+      }
+      #eval {
+        width: 100%;
+        border: 1px solid #919191;
+      }
+      #eval section:not(:last-child) {
+        border-bottom: 1px solid #919191;
+      }
+      #eval section {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem;
+      }
+      #eval section h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.6rem;
+        margin-bottom: 2.5rem;
+      }
+      #eval section.bottom-section {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .results {
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5rem;
+        color: #262626;
+      }
+
+      #project-name {
+        margin: 4rem auto 2rem auto;
+        font-size: 3rem;
+        border: none;
+        border-bottom: 1px solid #919191;
+        width: 90%;
+      }
+
+      .evaluate {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.5rem;
+      }
+      .evaluate .question {
+        width: 25%;
+        display: inline-block;
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+        color: #262626;
+        margin-right: 7rem;
+      }
+      .evaluate input {
+        border: 2px solid #c4c4c4;
+        height: 4rem;
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+        padding: 1.5rem;
+        width: 12rem;
+      }
+      .evaluate input::placeholder {
+        color: #919191;
+      }
+      .divided {
+        /* width: 25%; */
+        /* display: inline-block; */
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+        color: #919191;
+        margin-left: 1rem;
+      }
+      .project-time {
+        font-size: 2rem;
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        color: #262626;
+      }
+      .project-time i {
+        margin-right: 0.5rem;
+        color: #757575;
+      }
+      .project-time input {
+        border: none;
+        text-decoration: underline;
+        font-display: bold;
+        font-size: 1.4rem;
+        width: 40%;
+        margin: 1%;
+      }
+      .project-time input::placeholder {
+        text-decoration-line: underline;
+        color: #000000;
+      }
+      .boolean input {
+        width: auto;
+        height: auto;
+      }
+      .radio {
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-right: 4rem;
+      }
+      .currency {
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5rem;
+        display: inline-block;
+        color: #262626;
+        margin-right: 1rem;
+      }
+      .currency-options {
+        display: flex;
+      }
+      select {
+        border: none;
+        font-family: "Ubuntu", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5rem;
+        color: #262626;
+        text-decoration: underline;
+
+        cursor: pointer;
+      }
+      select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+      }
+      select::-ms-expand {
+        display: none;
+      }
+      option {
+        font-size: 1.5rem;
+      }
+      /* Media Queries */
+      @media screen and (max-width: 1300px) {
+        .body-next {
+          margin: 8rem auto;
+        }
+
+        header {
+          height: 6rem;
+        }
+        header .next {
+          height: 6rem;
+          width: 15rem;
+          font-size: 3rem;
+        }
+        main .container {
+          width: 80%;
+        }
+        .evaluate .question {
+          width: 40%;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        main .container .projects {
+          width: 70%;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 660px) {
+        main .container {
+          width: 95%;
+        }
+      }
+
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button class="cancel">X</button>
+      <button class="back"><i class="fas fa-chevron-left"></i></button>
+      <h1>Create Estimate</h1>
+      <button class="next">Next</button>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Evaluation</h1>
+        <p>Please input the required details in the form below.</p>
+        <form action="" id="eval">
+          <section>
+            <h2 id="project-name">Name of the Project</h2>
+          </section>
+          <section>
+            <h3>Billing</h3>
+            <div class="evaluate">
+              <span class="question"
+                >How long (in hours) will it take you to complete this
+                project</span
+              >
+              <input type="number" placeholder="Hours  " name="hours" min="1" />
+            </div>
+            <div class="evaluate">
+              <span class="question">How much do you charge per hour</span>
+              <input
+                type="number"
+                placeholder="NGN 0.00"
+                name="per-hour-charge"
+              />
+            </div>
+            <div class="evaluate off-evaluate">
+              <span class="question">Project starts/ends</span>
+              <span class="project-time"
+                ><i class="far fa-calendar-alt"></i
+                ><input
+                  type="text"
+                  required
+                  onfocus="(this.type='date'); (this.name='start')"
+                  name="start"
+                  placeholder=" Set start date"/><i
+                  class="far fa-calendar-alt"
+                ></i
+                ><span
+                  ><input
+                    type="text"
+                    required
+                    onfocus="(this.type='date'); (this.name='end')"
+                    name="end"
+                    placeholder=" Set end date"/></span
+              ></span>
+            </div>
+          </section>
+          <section>
+            <h3>Expenses</h3>
+            <div class="evaluate">
+              <span class="question"
+                >How much would it cost to power your devices or equipment for
+                this project?</span
+              >
+              <input type="number" placeholder="NGN 0.00" name="power-cost" />
+            </div>
+            <div class="evaluate boolean">
+              <span class="question">Are you subcontracting to anyone</span>
+              <div id="boolean-answer">
+                <input type="radio" name="subcontract" value="yes" /><span
+                  class="radio"
+                  >Yes</span
+                >
+                <input type="radio" name="subcontract" value="no" />
+                <span class="radio">No</span>
+              </div>
+            </div>
+            <div class="evaluate subcontract">
+              <span class="question">Who are you subcontracting to</span>
+              <input
+                type="text"
+                style="width: 300px"
+                name="subcontracting"
+                placeholder="E.g. Ilustrator, Consulting..."
+              />
+            </div>
+            <div class="evaluate subcontract">
+              <span class="question">How much would they be paid</span>
+              <input
+                type="number"
+                placeholder="NGN 0.00"
+                name="subcontractor-pay"
+              />
+            </div>
+
+            <h3>Expertise</h3>
+            <div class="evaluate">
+              <span class="question"
+                >How many similar projects have you done before?</span
+              >
+              <input type="number" placeholder="" name="similar" />
+            </div>
+
+            <div class="evaluate">
+              <span class="question"
+                >Out of 5 how would you rate your experience level in executing
+                this project</span
+              >
+              <input
+                style="width: 70px;"
+                type="number"
+                placeholder=""
+                name="rating"
+                min="1"
+                max="5"
+              />
+              <span class="divided">/ 5</span>
+            </div>
+          </section>
+          <section class="bottom-section">
+            <div class="currency-options">
+              <span class="currency">Currency:</span>
+              <select name="currency" id="currency-options">
+                <option value="NGN" selected>NGN</option>
+                <option value="USD">USD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="AED">AED</option>
+                <option value="AFN">AFN</option>
+                <option value="ALL">ALL</option>
+                <option value="AMD">AMD</option>
+                <option value="ARS">ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="AZN">AZN</option>
+                <option value="BAM">BAM</option>
+                <option value="BDT">BDT</option>
+                <option value="BGN">BGN</option>
+                <option value="BHD">BHD</option>
+                <option value="BIF">BIF</option>
+                <option value="BND">BND</option>
+                <option value="BOB">BOB</option>
+                <option value="BRL">BRL</option>
+                <option value="BWP">BWP</option>
+                <option value="BYR">BYR</option>
+                <option value="BZD">BZD</option>
+                <option value="CDF">CDF</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CRC">CRC</option>
+                <option value="CVE">CVE</option>
+                <option value="CZK">CZK</option>
+                <option value="DJF">DJF</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="DZD">DZD</option>
+                <option value="EEK">EEK</option>
+                <option value="EGP">EGP</option>
+                <option value="ERN">ERN</option>
+                <option value="ETB">ETB</option>
+                <option value="GBP">GBP</option>
+                <option value="GEL">GEL</option>
+                <option value="GHS">GHS</option>
+                <option value="GNF">GNF</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HNL">HNL</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="IQD">IQD</option>
+                <option value="IRR">IRR</option>
+                <option value="ISK">ISK</option>
+                <option value="JMD">JMD</option>
+                <option value="JOD">JOD</option>
+                <option value="JPY">JPY</option>
+                <option value="KES">KES</option>
+                <option value="KHR">KHR</option>
+                <option value="KMF">KMF</option>
+                <option value="KRW">KRW</option>
+                <option value="KWD">KWD</option>
+                <option value="KZT">KZT</option>
+                <option value="LBP">LBP</option>
+                <option value="LKR">LKR</option>
+                <option value="LTL">LTL</option>
+                <option value="LVL">LVL</option>
+                <option value="LYD">LYD</option>
+                <option value="MAD">MAD</option>
+                <option value="MDL">MDL</option>
+                <option value="MGA">MGA</option>
+                <option value="MKD">MKD</option>
+                <option value="MMK">MMK</option>
+                <option value="MOP">MOP</option>
+                <option value="MUR">MUR</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="MZN">MZN</option>
+                <option value="NAD">NAD</option>
+                <option value="NIO">NIO</option>
+                <option value="NOK">NOK</option>
+                <option value="NPR">NPR</option>
+                <option value="NZD">NZD</option>
+                <option value="OMR">OMR</option>
+                <option value="PAB">PAB</option>
+                <option value="PEN">PEN</option>
+                <option value="PHP">PHP</option>
+                <option value="PKR">PKR</option>
+                <option value="PLN">PLN</option>
+                <option value="PYG">PYG</option>
+                <option value="QAR">QAR</option>
+                <option value="RON">RON</option>
+                <option value="RSD">RSD</option>
+                <option value="RUB">RUB</option>
+                <option value="RWF">RWF</option>
+                <option value="SAR">SAR</option>
+                <option value="SDG">SDG</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="SOS">SOS</option>
+                <option value="SYP">SYP</option>
+                <option value="THB">THB</option>
+                <option value="TND">TND</option>
+                <option value="TOP">TOP</option>
+                <option value="TRY">TRY</option>
+                <option value="TTD">TTD</option>
+                <option value="TWD">TWD</option>
+                <option value="TZS">TZS</option>
+                <option value="UAH">UAH</option>
+                <option value="UGX">UGX</option>
+                <option value="UYU">UYU</option>
+                <option value="UZS">UZS</option>
+                <option value="VEF">VEF</option>
+                <option value="VND">VND</option>
+                <option value="XAF">XAF</option>
+                <option value="XOF">XOF</option>
+                <option value="YER">YER</option>
+                <option value="ZAR">ZAR</option>
+                <option value="ZMK">ZMK</option>
+              </select>
+            </div>
+            <div class="results">
+              Estimate: &nbsp;<span class="result-value">------</span>
+              <span class="result-currency">NGN</span>
+            </div>
+          </section>
+        </form>
+        <button class="next body-next">Next</button>
+      </div>
+    </main>
+
+    <script>
+      let hoursInput = document.querySelector('input[name="hours"]');
+      let perHourChargeInput = document.querySelector(
+        'input[name="per-hour-charge"]'
+      );
+      let powerCostInput = document.querySelector('input[name="power-cost"]');
+      let subcontractingInput = document.querySelector(
+        'input[name="subcontracting"]'
+      );
+      let subcontractorPayInput = document.querySelector(
+        'input[name="subcontractor-pay"]'
+      );
+      let similarInput = document.querySelector('input[name="similar"]');
+      let ratingInput = document.querySelector('input[name="rating"]');
+
+      let inputArray = Array.from(document.querySelectorAll("input"));
+      let nextButtons = Array.from(document.querySelectorAll(".next"));
+      let currencyOptions = Array.from(
+        document.querySelectorAll("#currency-options option")
+      );
+      let currencySelect = document.querySelector("#currency-options");
+      let booleanSelect = document.querySelector("#boolean-answer");
+      let booleanRadio = Array.from(
+        document.querySelectorAll('input[name="subcontract"]')
+      );
+      let subcontractQuestionInput = Array.from(
+        document.querySelectorAll(".subcontract input")
+      );
+      let selectedBooleanValue;
+
+      subcontractQuestionInput.map(subInput => {
+        subInput.disabled = true;
+      });
+      booleanRadio.map(radio => {
+        radio.addEventListener("click", e => {
+          selectedBooleanValue = document.querySelector(
+            'input[name="subcontract"]:checked'
+          ).value;
+          if (selectedBooleanValue === "yes") {
+            subcontractQuestionInput.map(subInput => {
+              subInput.disabled = false;
+            });
+          } else {
+            subcontractQuestionInput.map(subInput => {
+              subInput.disabled = true;
+            });
+          }
+        });
+      });
+
+      inputArray.map(inputItem => {
+        inputItem.addEventListener("input", e => {
+          checkAllInputs();
+        });
+      });
+      currencySelect.addEventListener("change", e => {
+        document.querySelector(".result-currency").innerHTML =
+          currencySelect.options[currencySelect.selectedIndex].value;
+      });
+
+      function checkAllInputs() {
+        if (
+          !isEmpty(hoursInput.value) &&
+          !isEmpty(similarInput.value) &&
+          !isEmpty(powerCostInput.value) &&
+          !isEmpty(ratingInput.value) &&
+          !isEmpty(perHourChargeInput.value) &&
+          (selectedBooleanValue !== "yes" ||
+            (!isEmpty(subcontractingInput.value) &&
+              !isEmpty(subcontractorPayInput.value)))
+        ) {
+          nextButtons.map(button => {
+            if (!button.classList.contains("btn-active")) {
+              button.classList.add("btn-active");
+            }
+          });
+
+          //Estimate on the fly
+          let income = hoursInput.value * perHourChargeInput.value;
+          let estimate = income - powerCostInput.value;
+          estimate -=
+            selectedBooleanValue == "yes" ? subcontractorPayInput.value : 0;
+
+          document.querySelector(".result-value").innerHTML = numberWithCommas(
+            estimate
+          );
+        } else {
+          nextButtons.map(button => {
+            if (button.classList.contains("btn-active")) {
+              button.classList.remove("btn-active");
+            }
+          });
+
+          document.querySelector(".result-value").innerHTML = "------";
+        }
+      }
+      function isEmpty(value) {
+        return value === "" || value === null || value === undefined;
+      }
+      function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+    </script>
+  </body>
+</html>
