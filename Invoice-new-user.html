@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Estimates Logged In User</title>
+    <title>Create Invoice New User</title>
     <link rel="shortcut icon" href="https://res.cloudinary.com/ddu0ww15f/image/upload/v1571417665/icons8-estimates-16_adktgw.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
@@ -24,8 +24,8 @@
             font-family: 'Ubuntu', sans-serif;
             overflow-x: hidden;
         }
-      
-      
+
+
 
         .main-body {
             position: relative;
@@ -73,7 +73,7 @@
 
         .header-lists {
             display: flex;
-            justify-content:center;
+            justify-content: center;
             align-items: center;
             margin-right: 1rem !important;
             margin-left: 4rem !important;
@@ -83,9 +83,16 @@
 
         .header-lists li {
             display: inline-block;
-           margin-right: 20px;
+           
         }
-      
+        .login {
+            margin-left: 30px;
+           
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+        }
 
         .support-icon {
             height: 30px;
@@ -100,11 +107,8 @@
         .profile-photo {
             height: 40px;
             width: auto;
-            
         }
-        .profile-photo img {
-            border-radius: 50%;
-        }
+
         .support-list {
             display: inline-grid !important;
             grid-template-columns: 1fr 2fr;
@@ -157,10 +161,10 @@
 
         }
 
-      
-      
-      
-      
+        
+
+        
+
         .sidebar ul li {
             padding: 1rem 0rem;
             text-align: left;
@@ -182,14 +186,13 @@
             text-align: center;
             margin-bottom: 2rem;
         }
-        .create-estimate {
-            font-family: Ubuntu;
+        .create-invoice {
             width: 13rem;
             height: 3.5rem;
             background: #0ABAB5;
             color: white;
             border: none;
-            font-size: 28px;
+            font-size: 16px;
             text-align: center;
             margin-left: 40px;
             margin-top: 40px;
@@ -213,7 +216,9 @@
         }
 
         .content p {
+
             font-weight: normal;
+
             font-size: 14px;
             line-height: 20px;
             color: #091429;
@@ -256,7 +261,6 @@
                 width: auto;
             }
 
-
             .notification-icon {
                 height: 19.4px;
                 width: auto;
@@ -277,7 +281,6 @@
             .header {
                 padding: 0.7rem 3rem 0.7rem 0rem !important;
             }
-
 
             .main-heading {
                 font-size: 1.6rem;
@@ -304,10 +307,10 @@
                 right: 0;
                 top: 1px;
                 height: 20px;
-                width: 18px;
+                width: 28px;
                 cursor: pointer;
-                margin-right: 0.6rem;
-               
+                margin-right: 1.6rem;
+                padding-right: 0 !important;
             }
 
             .hamburger-btn {
@@ -318,7 +321,7 @@
                 background: black;
                 position: absolute;
                 right: 0rem;
-                top: 9px;
+                top: 12px;
                 width: 25px;
                 height: 3px;
                 transition: 0.5s all ease;
@@ -417,30 +420,26 @@
                 height: 15px;
                 width: auto;
             }
-            #menuBtn {
-                margin-right: 0;
-            }
+
             .support-list span {
                 font-size: 14px;
             }
 
             .notification-icon {
                 height: 16px;
-                
-              
+                width: auto;
             }
 
             .profile-photo {
                 height: 20px;
             }
 
-
             .profile-list span {
                 font-size: 14px;
             }
 
             .header-lists {
-                margin-right: 20%;
+                margin-right: 0 !important;
                 margin-left: 0 !important;
             }
 
@@ -451,20 +450,16 @@
             .hamburger-btn {
                 top: 11px;
                 height: 2px;
-                padding-right: 0;
-                margin-right: 1px !important;
             }
 
             .hamburger-btn::before {
                 top: -6px;
                 height: 2px;
-                margin-right: 1px !important;
             }
 
             .hamburger-btn::after {
                 top: 6px;
                 height: 2px;
-                margin-right: 1px !important;
             }
 
             .cross-hamburger::before {
@@ -487,11 +482,7 @@
             main {
                 margin-top: 7rem;
             }
-            .header-lists{
-                margin-right:20px;
-            }
-           
-            }
+
             .sign-up {
             width: 5.0rem;
             margin-right: 0rem;
@@ -506,23 +497,17 @@
         <header class="header">
             <!-- Header -->
             <div>
-                <h1 class="main-heading">Estimates</h1>
+                <h1 class="main-heading">Invoices</h1>
+
 
             </div>
             <div>
                 <ul class="header-lists">
-                    
+                    <li>
+                        <a href="/signin.html" class="login" > <span>Login</span></a>
+                    </li>
                     <li class="profile-list">
-                        <a href="clientInformation.html" class="support-icon"><img src="https://res.cloudinary.com/mide358/image/upload/v1571239047/help_skaspu.png"
-                            alt="" srcset="">Support <span> </span> </a>
-                    </li>
-                    <li>
-                        <a href=" " class="notification-icon" > <img src="https://res.cloudinary.com/mide358/image/upload/v1571239022/notification_mysvnj.png" 
-                            alt="" srcset=""><span></span></a>
-                    </li>
-                    <li>
-                        <a href="/signin.html" class="profile-photo" ><img src="https://res.cloudinary.com/mide358/image/upload/v1571239118/images_gscs6c.png"
-                            alt="" srcset=""> Juliet <i class="fa fa-angle-down"></i><span></span></a>
+                        <a href="/signup.html" class="sign-up"> <span> Sign Up</span> </a>
                     </li>
                     <li class="hamburger" id="menuBtn">
                         <span class="hamburger-btn"></span>
@@ -574,7 +559,7 @@
             <div class="container main-container">
 
                 <div class="content">
-                    <button class='create-estimate'>Create Estimate</button>
+                    <button class='create-invoice'>Create invoice</button>
                     <h3>Estimates helps you place value to your work and time!</h3>
                     <p>Create an estimate and easily convert it to an invoice and send to your client.</p>
                 </div>
@@ -609,7 +594,7 @@
             showMenu = false;
         }
     })
-    document.querySelector('.create-estimate').addEventListener('click', () => {
+    document.querySelector('.create-invoice').addEventListener('click', () => {
             location.href = "invoice-view.html"
         })
 </script>
