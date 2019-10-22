@@ -22,6 +22,7 @@ li {
 .h1, h1 {
     font-size: 2.4rem !important;
     margin-top: 4% !important;
+    margin-left: 28% !important;
     color: #262626;
 }
 .text-center h1 {
@@ -33,7 +34,7 @@ button {
     background: #ffffff;
     border: none;
     height: 100%;
-}
+    }
 #container div {
     border: 1px solid black;
 }
@@ -45,15 +46,7 @@ button {
     font-weight: bold;
     color: #323A43;
 }
-/*#container .navM {
-    justify-content: center;
-    font-style: normal;
-    font-weight: bold;
-    display: inline-flex;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-}*/
+
 .cEstimate { 
     margin: 0 auto;
     align-content: center;
@@ -118,7 +111,9 @@ h5 {
     display: grid;
     min-height: 34vh;
     max-width: fit-content;
+    justify-content: center;
     position: relative;
+    
 }
 .card .card-body
 {
@@ -131,6 +126,8 @@ h5 {
     border: 5px solid black;
     box-sizing: border-box;
 }
+
+
 .dropbtn, .project {
      margin-top: 1vh; 
     height: 50px;
@@ -172,16 +169,7 @@ h5 {
     color: white;
 }
 
-.est {
-    color: white; 
-    background:  #0ABAB5;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 32px;
-    padding: 10px;
-    text-align: center;
-    padding-top: 10px !important;
-}
+
 li {
     padding: 15px;
     margin: 8px !important;
@@ -230,12 +218,7 @@ option, select{
 #clear{
     padding: auto;
 }
- /*#ext {
-    justify-content: center;
-    border: none;
-    color: white;
-    border: none !important;
-}*/
+ 
 .row {
     margin-right: 0;
     margin-left: -15px;

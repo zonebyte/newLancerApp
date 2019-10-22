@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Estimation-Lancer</title>
-  <link rel="shortcut icon" href="https://res.cloudinary.com/ddu0ww15f/image/upload/v1571417665/icons8-estimates-16_adktgw.png" type="image/x-icon">
+
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -29,18 +29,20 @@
 
 #container div {
   box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
-  height: 50px;
+  height: 60px;
 }
 
 #container i {
-  padding-top: 15px;
-  color: #C4C4C4
+  padding-top: 20px;
+  color: #C4C4C4;
+  font-size:1.3em;
 }
 
 #container p {
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px;
   font-style: normal;
+  font-size:1.3em;
   font-weight: bold;
   color: #323A43;
 }
@@ -48,9 +50,14 @@
 .cnc {
   border: none;
   background: #e4e4e4;
-  height: 50px;
+  height: 60px;
   width: 100%;
   color: white;
+  font-size:1.5em;
+}
+
+.cnc:hover{
+    background: #0ABAB5;
 }
 
 /* main section */
@@ -175,6 +182,11 @@ select {
   color: white;
 }
 
+.btn:hover{
+    background: #0ABAB5;
+    color:white;
+}
+
 @media screen and (max-width: 1400px) {
   .start {
     margin-left: 80px;
@@ -193,6 +205,13 @@ select {
   }
 }
 
+@media (max-width: 976px) {
+
+.cnc{
+    font-size: 15px;
+}
+}
+
 @media (max-width: 948px) {
   .hour, .hours {
     display: block;
@@ -206,18 +225,24 @@ select {
     width: 100%;
   }
 }
-    
- @media (max-width: 600px) {
+
+
+@media (max-width: 600px) {
   .main-section {
   margin: 50px auto;
   width: 80%;
 }
-  
-  
+
 input {
-   width: 80%;
-  margin-bottom:10px;
- }
+  
+  width: 80%;
+  
+}
+
+#glac h1{
+    text-align: left;
+    font-size: 1.5em;;
+}
 }
   </style>
 </head>
